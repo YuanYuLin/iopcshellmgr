@@ -1,0 +1,9 @@
+config BR2_PACKAGE_IOPCLAUNCHER
+	bool "iopc launcher"
+#	select BR2_PACKAGE_MDADM
+#	select BR2_PACKAGE_LXC
+#	select BR2_PACKAGE_LIBMICROHTTPD
+#	select BR2_TARGET_ROOTFS_INITRAMFS
+	select BR2_TARGET_ROOTFS_IOPCLAUNCHER
+	help
+	  iopc launcher

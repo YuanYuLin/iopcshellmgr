@@ -1,0 +1,16 @@
+#!/bin/sh
+
+name="vm1"
+container="/iopc/container"
+debian_jessie="/iopc/dist/debian_jessie"
+lowerdir="$debian_jessie"
+upperdir="$container/$name/upper"
+workdir="$container/$name/work"
+rootfs="$container/$name/rootfs"
+
+mkdir -p $upperdir
+mkdir -p $workdir
+mkdir -p $rootfs
+
+mount -t overlay overlay -olowerdir=$lowerdir,upperdir=$upperdir,workdir=$workdir $rootfs
+
